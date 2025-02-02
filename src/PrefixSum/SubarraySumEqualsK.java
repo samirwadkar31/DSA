@@ -6,7 +6,7 @@ public class SubarraySumEqualsK {
     public static void main(String[] args) {
         int[] nums= {3, 4, 7, 2, -3, 1, 4, 2, 1};
         int k=7;
-
+        // there are total 6 subarrays whose sum equals k=7
         System.out.println("SubarraySumEqualsK "+ subarraySum(nums,k));
 
     }

@@ -29,7 +29,7 @@ public class ContinuousSubarraySum {
                     return true;
                 }
             }else{
-                map.put(reminder, i); // we want 1st occur do not update reminder index
+                map.put(reminder, i); // we want 1st occur as we want sub array size >=2 do not update reminder index
             }
         }
         return false;

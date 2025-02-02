@@ -28,6 +28,8 @@ public class MaximumSizeSubarraySumEqualsk {
                 int size= i-map.get(sum-k);
                 max= Math.max(max,size);
             }
+            // I want maximum length, if I update index for the repeated sum,
+            // I might not get max length. I want first occurance of the sum only.
 
             if(!map.containsKey(sum)){
                 map.put(sum,i);
