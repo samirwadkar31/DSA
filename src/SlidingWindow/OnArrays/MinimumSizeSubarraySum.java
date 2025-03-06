@@ -1,4 +1,4 @@
-package SlidingWindow;
+package SlidingWindow.OnArrays;
 
 public class MinimumSizeSubarraySum {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package BinarySearch;
+package BinarySearch.OnRange;
 
 public class MinimumTimeToCompleteTrips {
     public static void main(String[] args) {
