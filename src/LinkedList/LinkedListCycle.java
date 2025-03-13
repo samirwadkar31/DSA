@@ -3,25 +3,14 @@ package LinkedList;
 
 import java.util.List;
 
-class ListNode{
-    int val;
-    ListNode next;
-
-    public ListNode(int val){
-        this.val= val;
-    }
-
-    public ListNode(ListNode next){
-        this.next= next;
-    }
-
-}
 public class LinkedListCycle {
 
     public static void main(String[] args) {
         int[] nodes= {3,2,0,-4};
 
         ListNode head= new ListNode(0);
+
+        head.buildLinkedList(head, nodes);
         ListNode temp= head;
         ListNode cycleNode= null;
 
