@@ -12,19 +12,19 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
         int n= s.length();
         int maxsize=0;
-
-        HashSet<Character> set= new HashSet<>();
+        int[] alphabets = new int[26];
 
         int j=0;
 
         for(int i=0; i<n; i++){
-
-            while(set.contains(s.charAt(i))){
-                set.remove(s.charAt(j));
+            char c = s.charAt(i);
+            alphabets[c - 'a']++;
+            while(alphabets[c - 'a'] > 1){
+                char prev = s.charAt(j);
+                alphabets[prev - 'a']--;
                 j++;
             }
 
-            set.add(s.charAt(i));
             maxsize= Math.max(maxsize,i-j+1);
         }
 
