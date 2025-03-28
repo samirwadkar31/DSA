@@ -1,4 +1,4 @@
-package BinarySearch.OnRange;
+package BinarySearch.OnAnswer;
 
 public class KokoEatingBananas {
     public static void main(String[] args) {

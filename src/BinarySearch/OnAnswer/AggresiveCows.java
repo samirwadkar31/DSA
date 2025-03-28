@@ -1,4 +1,4 @@
-package BinarySearch.OnRange;
+package BinarySearch.OnAnswer;
 
 import java.util.Arrays;
 
