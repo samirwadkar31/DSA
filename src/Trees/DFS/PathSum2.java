@@ -1,4 +1,7 @@
-package Trees;
+package Trees.DFS;
+import Trees.BinaryTree;
+import Trees.TreeNode;
+
 import java.util.List;
 import java.util.ArrayList;
 

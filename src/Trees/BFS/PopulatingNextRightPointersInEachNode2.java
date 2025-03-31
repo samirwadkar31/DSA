@@ -1,4 +1,7 @@
-package Trees;
+package Trees.BFS;
+
+import Trees.BinaryTree;
+import Trees.TreeNode;
 
 public class PopulatingNextRightPointersInEachNode2 {
     public static void main(String[] args) {

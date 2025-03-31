@@ -1,4 +1,7 @@
-package Trees;
+package Trees.DFS;
+
+import Trees.BinaryTree;
+import Trees.TreeNode;
 
 public class DiameterOfBinaryTree {
     public static void main(String[] args) {

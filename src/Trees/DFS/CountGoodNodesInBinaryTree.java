@@ -1,4 +1,4 @@
-package Trees;
+package Trees.DFS;
 
 import Trees.BinaryTree;
 import Trees.TreeNode;

@@ -1,7 +1,9 @@
-package Trees;
+package Trees.BFS;
+
+import Trees.BinaryTree;
+import Trees.TreeNode;
 
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 public class PopulatingNextRightPointersInEachNode1 {
