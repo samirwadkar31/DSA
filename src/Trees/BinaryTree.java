@@ -48,4 +48,43 @@ public class BinaryTree {
         }
     }
 
+    public TreeNode buildTreeBST(Integer[] arr) {
+        if (arr == null || arr.length == 0) return null;
+
+        root = null;
+        for (Integer val : arr) {
+            if (val != null) {
+                root = insertIntoBST(root, val);
+            }
+        }
+        return root;
+    }
+
+    // Helper method to insert elements in BST
+    private TreeNode insertIntoBST(TreeNode root, int val) {
+        if (root == null) return new TreeNode(val);
+
+        if (val < root.val) {
+            root.left = insertIntoBST(root.left, val);
+        } else {
+            root.right = insertIntoBST(root.right, val);
+        }
+        return root;
+    }
+
+    // Level-order print (BFS)
+    public void printTreeBST(TreeNode root) {
+        if (root == null) return;
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+
+        while (!q.isEmpty()) {
+            TreeNode temp = q.poll();
+            System.out.print(temp.val + " ");
+
+            if (temp.left != null) q.add(temp.left);
+            if (temp.right != null) q.add(temp.right);
+        }
+    }
+
 }
