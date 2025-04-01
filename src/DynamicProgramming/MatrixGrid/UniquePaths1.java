@@ -13,23 +13,31 @@ public class UniquePaths1 {
     public static int uniquePaths(int m, int n) {
         int[][] dp = new int[m][n];
 
+        int[][] directions = {{1,0}, {0,1}};
+
         for(int[] arr: dp) Arrays.fill(arr, -1);
 
-        return helper(0, 0, m, n, dp);
+        return helper(0, 0, m, n, dp, directions);
     }
 
-    public static int helper(int i, int j, int m, int n, int[][] dp){
-
-        if(i==m-1 && j==n-1) return 1;
+    public static int helper(int i, int j, int m, int n, int[][] dp, int[][] directions){
 
         if(i>=m || j>=n ) return 0;
 
+        if(i==m-1 && j==n-1) return 1;
+
         if(dp[i][j]!=-1) return dp[i][j];
 
-        int right= helper(i, j+1, m, n, dp);
-        int down= helper(i+1, j, m, n, dp);
+        int count = 0;
 
-        return dp[i][j]= right+down;
+        for(int[] dir: directions){
+            int x = i + dir[0];
+            int y = j + dir[1];
+
+            count += helper(x, y, m, n, dp, directions);
+        }
+
+        return dp[i][j]= count;
     }
 
     // Bottom Up Approach

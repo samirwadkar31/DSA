@@ -10,29 +10,39 @@ public class MinimumPathSum {
     }
 
     public static int minPathSum(int[][] grid) {
-        int m= grid.length;
-        int n= grid[0].length;
+        int n = grid.length;
+        int m = grid[0].length;
 
-        int[][] dp = new int[m][n];
+        int[][] directions = {{1,0}, {0,1}};
+        int[][] dp = new int[n][m];
+        for (int[] row : dp) {
+            Arrays.fill(row, Integer.MAX_VALUE);
+        }
 
-        for(int[] arr: dp) Arrays.fill(arr, -1);
+        int minSum = dfs(grid, 0, 0, directions, n, m, dp);
 
-        return helper(grid, 0, 0, m, n, dp);
+        return minSum;
 
     }
 
-    public static int helper(int[][] grid, int i, int j, int m, int n, int[][] dp){
+    public static int dfs(int[][] grid, int i, int j, int[][] directions, int n, int m, int[][] dp){
 
-        if(i==m-1 && j==n-1) return grid[i][j];
+        if(i >= n || j >= m) return Integer.MAX_VALUE;
+        if(dp[i][j] != Integer.MAX_VALUE) return dp[i][j];
+        if(i == n-1 && j == m -1) return grid[i][j];
 
-        if(i>=m || j>=n) return Integer.MAX_VALUE;
+        int sum = grid[i][j];
+        int minAnswer = Integer.MAX_VALUE;
 
-        if(dp[i][j]!=-1) return dp[i][j];
+        for(int[] dir: directions){
+            int x = i + dir[0];
+            int y = j + dir[1];
 
-        int right= helper(grid, i, j+1, m, n, dp);
-        int down= helper(grid, i+1, j, m, n, dp);
+            minAnswer = Math.min(minAnswer, dfs(grid, x, y, directions, n, m, dp));
+        }
+        sum += minAnswer;
 
-        return dp[i][j]= grid[i][j]+ Math.min(right, down);
+        return dp[i][j] = sum;
     }
 
     // bottom up Approach
