@@ -1,4 +1,4 @@
-package DynamicProgramming.LongestCommonSubsequence;
+package DynamicProgramming.LPS;
 
 import java.util.Arrays;
 
