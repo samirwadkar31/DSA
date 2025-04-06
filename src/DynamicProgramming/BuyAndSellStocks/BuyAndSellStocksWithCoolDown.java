@@ -4,7 +4,7 @@ public class BuyAndSellStocksWithCoolDown {
     public static void main(String[] args) {
         int[] prices = {1,2,3,0,2};
 
-        System.out.println("Maximum Profit with unlimited transactions: " + maxProfitTopDown(prices));
+        System.out.println("Maximum Profit with unlimited transactions and cooldown period of one day: " + maxProfitTopDown(prices));
     }
 
     public static int maxProfitTopDown(int[] prices) {

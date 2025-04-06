@@ -5,7 +5,7 @@ public class BuyAndSellStocksWithTransactionFee {
         int[] prices = {1,3,2,8,4,9};
         int fee = 2;
 
-        System.out.println("Maximum Profit with at most k transactions: " + maxProfitTopDown(prices, fee));
+        System.out.println("Maximum Profit with unlimited transactions & given fee: " + maxProfitTopDown(prices, fee));
     }
 
     public static int maxProfitTopDown(int[] prices, int fee) {
