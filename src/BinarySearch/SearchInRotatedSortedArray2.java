@@ -1,14 +1,14 @@
 package BinarySearch;
 
-public class SearchInRotatedSortedArray {
+public class SearchInRotatedSortedArray2 {
+
     public static void main(String[] args) {
-        int[] nums={4,5,6,7,0,1,2};
+        int[] nums={2,5,6,7,0,1,2};
         int target= 0;
-        System.out.println(search(nums, target));
+        System.out.println("Is target present: " + search(nums, target));
     }
 
-    public static int search(int[] nums, int target) {
-
+    public static boolean search(int[] nums, int target) {
         int n = nums.length;
         int start=0;
         int end=n-1;
@@ -17,7 +17,10 @@ public class SearchInRotatedSortedArray {
             int mid = start + (end-start)/2;
 
             if(nums[mid]==target){
-                return mid;
+                return true;
+            }else if(nums[mid]==nums[start] && nums[mid]==nums[end]){
+                start++;
+                end--;
             }else if(nums[start]<=nums[mid]){
                 if(nums[start]<=target && target<=nums[mid]){
                     end=mid-1;
@@ -32,6 +35,6 @@ public class SearchInRotatedSortedArray {
                 }
             }
         }
-        return -1;
+        return false;
     }
 }
