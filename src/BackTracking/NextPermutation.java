@@ -4,6 +4,7 @@ public class NextPermutation {
     public static void main(String[] args) {
         int[] nums= {1,2,3};
         //int[] nums= {3,2,1};
+        // easy to understand  {2,1,3,4} , next {2,3,1}
 
         int[] ans= nextPermutation(nums);
 
