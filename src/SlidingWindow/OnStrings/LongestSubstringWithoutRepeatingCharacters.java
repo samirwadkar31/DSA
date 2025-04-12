@@ -2,7 +2,7 @@ package SlidingWindow.OnStrings;
 
 import java.util.HashSet;
 
-public class LongestSubstringWithoutRepeatingCharacters {
+public class  LongestSubstringWithoutRepeatingCharacters {
     public static void main(String[] args) {
         String s= "abcabcbb";
         System.out.println(lengthOfLongestSubstring(s));
