@@ -1,4 +1,4 @@
-package DynamicProgramming.LCS;
+package DynamicProgramming.OnStrings;
 
 import java.util.Arrays;
 

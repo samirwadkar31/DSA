@@ -1,4 +1,4 @@
-package DynamicProgramming.LPS;
+package DynamicProgramming.LCS;
 
 public class MinimumInsertionStepsToMakeStringPalindrome {
     public static void main(String[] args) {

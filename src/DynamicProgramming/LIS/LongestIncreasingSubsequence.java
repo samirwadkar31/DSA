@@ -1,4 +1,4 @@
-package DynamicProgramming.LCS;
+package DynamicProgramming.LIS;
 
 import java.util.ArrayList;
 import java.util.List;
