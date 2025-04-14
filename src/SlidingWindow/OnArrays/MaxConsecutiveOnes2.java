@@ -1,0 +1,33 @@
+package SlidingWindow.OnArrays;
+
+
+public class MaxConsecutiveOnes2 {
+    public static void main(String[] args) {
+
+        int[] nums = {1,0,1,1,0};
+        System.out.println("Max Consecutive Ones in arr: " + longestOnes(nums));
+    }
+
+    public static int longestOnes(int[] nums) {
+        int j = 0;
+        int zeroCount = 0;
+        int maxLength = 0;
+
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] == 0){
+                zeroCount++;
+            }
+
+            while(zeroCount > 1){
+                if(nums[j] == 0){
+                    zeroCount--;
+                }
+                j++;
+            }
+
+            maxLength = Math.max(maxLength, i - j + 1);
+        }
+
+        return maxLength;
+    }
+}

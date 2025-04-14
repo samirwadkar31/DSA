@@ -22,9 +22,9 @@ public class MinimumWindowSubstring {
         }
 
         int requiredCount= m;
-        int j=0, start=0, minSize=Integer.MAX_VALUE;
+        int i = 0, j=0, start=0, minSize=Integer.MAX_VALUE;
 
-        for(int i = 0; i<n; i++){
+        while(i<n){
             char scurr= s.charAt(i);
 
             if(map.containsKey(scurr) && map.get(scurr)>0){
